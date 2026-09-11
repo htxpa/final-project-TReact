@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .purple {
   color: #6415ff;
 }
@@ -96,9 +100,13 @@ button {
   transition: all 300ms ease;
 }
 
+.btn:hover {
+  background-color: rgba(80, 17, 204);
+}
+
 /* NAVIGATION */
 
-.nav {
+nav {
   padding-top: 32px;
   display: flex;
 }
@@ -145,6 +153,22 @@ button {
   margin: 0 24px;
 }
 
+.nav__link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  background: #6415ff;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+
+.nav__link:hover:after {
+  opacity: 1;
+}
+
 .login {
   margin-left: 48px;
 }
@@ -160,6 +184,76 @@ button {
   width: auto;
   transition: all 300ms ease;
 }
+
+.nav__link--primary:hover {
+  background-color: rgba(80, 17, 204);
+  color: white;
+}
+
+.btn__menu {
+  background-color: transparent;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.btn__menu--close {
+  position: fixed;
+  top: 24px;
+  right: 18px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 378px;
+  margin: 24px 16px;
+  padding: 32px;
+  background-color: #fff;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  z-index: 4;
+  transition: all 300ms ease;
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__link {
+  color: #1a202c;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.menu__link--primary {
+  color: #f7fafc;
+  padding: 12px 32px;
+  background: #6415ff;
+  border-radius: 500px;
+  border: none;
+}
+
+.fa-bars {
+  height: 24px;
+  width: 24px;
+  color: #243e63;
+}
+
 
 /* HEADER / ABOUT US */
 
@@ -386,7 +480,7 @@ header .row {
   z-index: 1;
 }
 
-.quality__grid {
+.fa-grid-round-5 {
   transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
   width: 80px;
   height: 80px;
@@ -396,7 +490,7 @@ header .row {
   fill: rgb(100, 21, 255);
   --tw-text-opacity: 1;
   color: rgba(100, 21, 255, var(--tw-text-opacity));
-  z-index: 0;
+  z-index: 3;
   display: block;
 }
 
@@ -702,6 +796,14 @@ svg:not(:root) {
   letter-spacing: 0.05em 
 }
 
+.plan__button:hover {
+  transform: translate(1px, -1px);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
 .plan:nth-child(2) {
   background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
@@ -822,6 +924,15 @@ svg:not(:root) {
   margin: 0 12px;
 }
 
+.testimonial__button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.testimonial__button:hover {
+  background-color: rgb(229, 231, 235);
+}
+
 .divider {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -904,9 +1015,18 @@ svg:not(:root) {
   transition: all 300ms ease;
 }
 
+.start__button:hover:nth-child(1) {
+  background-color: rgba(229, 62, 62);
+}
+
 .start__button:nth-child(2) {
   border: 1px solid rgb(160, 174, 192);
   transition: all 300ms ease;
+}
+
+.start__button:hover:nth-child(2) {
+  background-color: rgba(247, 250, 252);
+  color: rgba(100, 21, 255);
 }
 
 .start__blob--1 {
@@ -972,6 +1092,26 @@ footer {
   cursor: pointer;
 }
 
+.footer__column--link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  background: white;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+
+.footer__column--link:hover:after {
+  opacity: 1;
+}
+
+.footer__column--link:nth-child(2) {
+  margin-top: 24px;
+}
+
 .footer__divider {
   width: 100%;
   height: 2px;
@@ -1014,16 +1154,25 @@ footer {
   margin-left: -16px;
 }
 
+.footer__social--link svg {
+  height: 16px;
+  width: 16px;
+}
+
 .footer__social--link {
   margin-left: 16px;
   padding: 8px;
   background: #f7fafc;
   display: flex;
   justify-content: center;
-  border-radius: 60%;
+  border-radius: 50%;
   z-index: 2;
   cursor: pointer;
   transition: all 300ms ease;
+}
+
+.footer__social--link:hover {
+  background-color: rgba(203, 213, 224)
 }
 
 .footer__blob--1 {
@@ -1047,3 +1196,10 @@ footer {
   z-index: 1;
   opacity: 0.5;
 }
+
+
+/* 
+@media screen {
+  
+*/ 
+

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/90f855e78f.js" crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+  <script src="index.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <title>Final Project</title>
 </head>
@@ -26,9 +26,27 @@
         <a href="#" class="nav__link login">Login</a>
         <a href="#" class="nav__link nav__link--primary">Sign Up</a>
       </div>
-      
     </div>
+      <div class="menu">
+          <button class="btn__menu" onClick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        <div class="menu">
+          <button class="btn__menu btn__menu--close" onClick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="menu__links">
+              <a class="menu__link">About</a>
+              <a class="menu__link">Blog</a>
+              <a class="menu__link">Pricing</a>
+              <a class="menu__link">Contact Us</a>
+              <a class="menu__link">Login</a>
+              <a class="menu__link menu__link--primary">Sign up</a>
+          </div>
+        </div>
+      </div>
     </nav>
+
     <header>
       <div class="container">
         <div class="row">
@@ -379,38 +397,38 @@
       <div class="footer__columns">
         <div class="footer__column">
           <div class="footer__column--title">MAIN</div>
-          <a href="#" class="footer__column--link">Blog</a>
-          <a href="#" class="footer__column--link">FAQs</a>
-          <a href="#" class="footer__column--link">Support</a>
-          <a href="#" class="footer__column--link">About Us</a>
+          <a class="footer__column--link">Blog</a>
+          <a class="footer__column--link">FAQs</a>
+          <a class="footer__column--link">Support</a>
+          <a class="footer__column--link">About Us</a>
         </div>
         <div class="footer__column">
           <div class="footer__column--title">PRODUCT</div>
-          <a href="#" class="footer__column--link">Log In</a>
-          <a href="#" class="footer__column--link">Personal</a>
-          <a href="#" class="footer__column--link">Business</a>
-          <a href="#" class="footer__column--link">Team</a>
+          <a class="footer__column--link">Log In</a>
+          <a class="footer__column--link">Personal</a>
+          <a class="footer__column--link">Business</a>
+          <a class="footer__column--link">Team</a>
         </div>
         <div class="footer__column">
           <div class="footer__column--title">PRESS</div>
-          <a href="#" class="footer__column--link">Logos</a>
-          <a href="#" class="footer__column--link">Events</a>
-          <a href="#" class="footer__column--link">Stories</a>
-          <a href="#" class="footer__column--link">Office</a>
+          <a class="footer__column--link">Logos</a>
+          <a class="footer__column--link">Events</a>
+          <a class="footer__column--link">Stories</a>
+          <a class="footer__column--link">Office</a>
         </div>
         <div class="footer__column">
           <div class="footer__column--title">TEAM</div>
-          <a href="#" class="footer__column--link">Career</a>
-          <a href="#" class="footer__column--link">Founders</a>
-          <a href="#" class="footer__column--link">Culture</a>
-          <a href="#" class="footer__column--link">Onboarding</a>
+          <a class="footer__column--link">Career</a>
+          <a class="footer__column--link">Founders</a>
+          <a class="footer__column--link">Culture</a>
+          <a class="footer__column--link">Onboarding</a>
         </div>
         <div class="footer__column">
           <div class="footer__column--title">LEGAL</div>
-          <a href="#" class="footer__column--link">GDPR</a>
-          <a href="#" class="footer__column--link">Privacy Policy</a>
-          <a href="#" class="footer__column--link">Terms of Service</a>
-          <a href="#" class="footer__column--link">Disclaimer</a>
+          <a class="footer__column--link">GDPR</a>
+          <a class="footer__column--link">Privacy Policy</a>
+          <a class="footer__column--link">Terms of Service</a>
+          <a class="footer__column--link">Disclaimer</a>
         </div>
       </div>
       <div class="footer__divider"></div>
