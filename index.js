@@ -1,10 +1,6 @@
-
 function openMenu() {
-  document.body.classList += "menu--open"
+  document.body.classList += " menu--open";
 }
-
 function closeMenu() {
-  document.body.classList.remove('menu--open')
-} 
-
-feather.replace()
+  document.body.classList.remove("menu--open");
+}
