@@ -1338,6 +1338,7 @@ footer {
 
   h1 {
     font-size: 30px;
+    text-align: center;
   }
 
   .header__discription--para {
@@ -1605,6 +1606,7 @@ footer {
   #features .section__title,
   #pricing .section__title {
     font-size: 36px;
+    text-align: center;
   }
 
   .feature__row {
